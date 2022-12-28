@@ -1,0 +1,28 @@
+---
+title: "Strings"
+date: "`r Sys.Date()`"
+output:
+  html_document:  
+    df_print: paged
+    css: ../css/pastel.css
+    highlight: tango
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
+    number_sections: yes
+---
+
+```{r include = FALSE}
+# clear workspace
+rm(list = ls(all = TRUE))
+setwd(here::here("html"))
+```
+
+# Strings
+
+## Session Info
+
+```{r}
+sessionInfo()
+```

@@ -1,0 +1,301 @@
+/*--------------*/
+/* Google Fonts */
+/*--------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lobster&display=swap');
+
+/*---------------*/
+/* CSS Variables */
+/*---------------*/
+
+:root {
+
+    /* text styling */
+    --font-title: "Lobster", cursive;
+    --font-text: "Barlow", sans-serif;
+    --font-code: "JetBrains Mono", monospace;
+    --text: #021728;
+
+    /* table of contents */
+    --toc-active-bg: #021728;
+    --toc-active-text: #faf0e6;
+    --toc-hover-bg: #87ceeb;
+    --toc-hover-text: #faf0e6;
+
+    /* code blocks */
+    --r-source-bg: #021728;
+    --r-source-text: #faf0e6;
+    --r-output-bg: #f7f7f7;
+    --r-output-text: #637777;
+    
+    /* syntax highlighting */
+    --code-fun: #87ceeb;
+    --code-flw: #87ceeb;
+    --code-att: #abe2cb;
+    --code-str: #c792ea;
+    --code-num: #f78c6c;
+    --code-lgl: #ffb6c1;
+    --code-ops: #ffb6c1;
+    --code-err: #ff69b4;
+    --code-com: #637777;
+    --code-oth: #faf0e6;
+}
+
+/*------------*/
+/* Style Text */
+/*------------*/
+
+body{
+    font-family: var(--font-text);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--font-text);
+}
+
+h1{
+    font-family: var(--font-title);
+    font-size: 32px;
+    font-weight: 400;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+h1::after{
+    content: "";
+    display: block;
+    border-top: 3px double #B9B9B9;
+    width: 5%;
+    margin: 25px auto;
+}
+
+.title::after{
+    display: none;
+}
+
+h2{
+    font-family: var(--font-text);
+    font-size: 26px;
+    margin-top: 40px;
+}
+
+h3{
+    font-family: var(--font-text);
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.date {
+    font-size: 14px;
+    opacity: 0.35;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*--------*/
+/* Tables */
+/*--------*/
+
+thead>tr>th {
+  font-family: var(--font-text) !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
+  font-size: 16px !important;
+  text-align: left !important;
+}
+
+tbody>tr>td{
+  font-family: var(--font-text) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+.pagedtable-wrapper {
+    border: none;
+    margin: 50px 0;
+}
+
+.pagedtable .even, .pagedtable .odd {
+    background-color: white;
+}
+
+.pagedtable-header-type{
+    font-style: italic;
+}
+
+/*-----------*/
+/* Numbering */
+/*-----------*/
+
+.header-section-number{
+    display: none;
+}
+
+.tocify-item .header-section-number{
+    display: inline;
+}
+
+/*-------------------*/
+/* Table of Contents */
+/*-------------------*/
+
+#TOC{
+    border: none;
+}
+
+.tocify{
+    border-radius: 0;
+}
+
+.tocify-item{
+    border-radius: 10px !important;
+    border: none;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 4px !important;
+}
+
+.tocify-subheader .tocify-item{
+    font-size: 15px !important;
+}
+
+.tocify-item:hover, .tocify-item.active:hover{
+    background-color: var(--toc-hover-bg);
+    color: var(--toc-hover-text);
+}
+
+.tocify-item.active {
+    background-color: var(--toc-active-bg);
+    color: var(--toc-active-text);
+}
+
+/*-----------------*/
+/* Code and Output */
+/*-----------------*/
+
+pre,
+code {
+    font-family: var(--font-code);
+    font-size: 16px;
+    font-weight: 400 !important;
+}
+
+code {
+    border-radius: 5px;
+    border: none;
+    line-height: 1.5;
+}
+    
+.style-source {
+    background-color: var(--r-source-bg) !important;
+    border-radius: 10px;
+    border: none;
+    color: var(--r-source-text);
+}
+
+.style-output {
+    background-color: var(--r-output-bg) !important;
+    border-radius: 10px;
+    border: none;
+    color: var(--r-output-text);
+}
+
+.style-output code{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*--------*/
+/* Images */
+/*--------*/
+
+img {
+    display: inline-block;
+    margin: 50px auto;
+}
+
+/*---------------------*/
+/* Syntax Highlighting */
+/*---------------------*/
+
+/* functions */
+code span.fu {
+    color: var(--code-fun);
+}
+
+/* control flow */
+code span.cf {
+    color: var(--code-flw);
+}
+
+/* attributes */
+code span.at {
+    color: var(--code-att);
+}
+
+/* strings, characters */
+code span.ch,
+code span.st {
+    color: var(--code-str);
+}
+
+/* operators, special characters (like %>%, %in%, $) */
+code span.op,
+code span.sc,
+code span.ss {
+    color: var(--code-ops);
+}
+
+/* numbers */
+code span.dv,
+code span.fl {
+    color: var(--code-num);
+}
+
+/* alerts, errors, warnings */
+code span.al,
+code span.er,
+code span.wa {
+    color: var(--code-err);
+}
+
+/* booleans, keywords, constants */
+code span.kw,
+code span.cn {
+    color: var(--code-lgl);
+}
+
+/* comments, annotations */
+code span.an,
+code span.co,
+code span.cv {
+    color: var(--code-com);
+    font-style: normal !important;
+}
+
+/* other */
+code span.do,
+code span.dt,
+code span.ex,
+code span.im,
+code span.in,
+code span.ot,
+code span.pp,
+code span.va,
+code span.vs,
+code span.bn,
+code span.bu {
+    color: var(--code-oth);
+}
