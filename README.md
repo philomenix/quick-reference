@@ -2,4 +2,5 @@
 
 This is a repository for my personal quick R reference.
 
-<!--include:./toc/toc.md-->
+[Num Chars](./pages/num-chars.html)
+[Strings](./pages/strings.html)
